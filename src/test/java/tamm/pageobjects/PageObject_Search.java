@@ -27,7 +27,7 @@ public class PageObject_Search {
 	
 	
 	@FindBy(xpath = "(//h4[@class='ui-lib-link__heading ui-lib-bold'])")
-	private List<WebElement> abc;
+	private List<WebElement> titlelist;
 	
 	
 	
@@ -42,7 +42,7 @@ public class PageObject_Search {
 	//Method to store the first five results of the search in list
 	public void GetFirstFiveRecords() {
 		for (int i=0;i<5;i++) {
-			String result_text=abc.get(i).getText();
+			String result_text=titlelist.get(i).getText();
 			list.add(result_text);
 		}
 	}
